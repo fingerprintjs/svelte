@@ -140,8 +140,12 @@ describe('useVisitorData', () => {
 
     const { api } = mountUseVisitorData()
 
-    await vi.waitFor(() => expect(mockGet).toHaveBeenCalledTimes(1))
-    await vi.waitFor(() => expect(get(api.data)).toEqual(testData))
+    await vi.waitFor(() => {
+      expect(mockGet).toHaveBeenCalledTimes(1)
+    })
+    await vi.waitFor(() => {
+      expect(get(api.data)).toEqual(testData)
+    })
 
     expect(mockGet).toHaveBeenCalledWith({})
     expect(get(api.error)).toBeUndefined()
@@ -169,7 +173,9 @@ describe('useVisitorData', () => {
 
     mountUseVisitorData({ tag: 'default-tag', linkedId: 'default-link' })
 
-    await vi.waitFor(() => expect(mockGet).toHaveBeenCalledWith({ tag: 'default-tag', linkedId: 'default-link' }))
+    await vi.waitFor(() => {
+      expect(mockGet).toHaveBeenCalledWith({ tag: 'default-tag', linkedId: 'default-link' })
+    })
   })
 
   it('stores immediate mount fetch errors without rejecting from onMount', async () => {
@@ -178,7 +184,9 @@ describe('useVisitorData', () => {
 
     const { api } = mountUseVisitorData()
 
-    await vi.waitFor(() => expect(get(api.error)).toBe(testError))
+    await vi.waitFor(() => {
+      expect(get(api.error)).toBe(testError)
+    })
 
     expect(console.error).toHaveBeenCalledWith('Failed to fetch visitor data on mount:', testError)
     expect(get(api.isFetched)).toBe(false)

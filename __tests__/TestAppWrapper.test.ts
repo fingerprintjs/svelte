@@ -39,7 +39,9 @@ describe('FingerprintProvider + useVisitorData', () => {
 
     visitorData.resolve(testData)
 
-    await waitFor(() => expect(queryByText('Loading...')).toBeNull())
+    await waitFor(() => {
+      expect(queryByText('Loading...')).toBeNull()
+    })
     expect(getByText((content) => content.includes(testData.visitor_id))).toBeTruthy()
   })
 
