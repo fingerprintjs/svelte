@@ -2,3 +2,8 @@ packages:
   - './'
   - './examples/*'
   - './__tests__/svelte5'
+
+# pnpm 11 blocks dependency build scripts by default. esbuild powers the Vite
+# builds used by the example apps and the test runner, so allow it to build.
+allowBuilds:
+  esbuild: true

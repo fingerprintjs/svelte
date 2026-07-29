@@ -1,8 +1,8 @@
-# Contributing to FingerprintJS Pro Svelte integration
+# Contributing to Fingerprint Svelte SDK
 
 ## Working with code
 
-We prefer using [pnpm](https://pnpmpkg.com/) for installing dependencies and running scripts.
+We prefer using [pnpm](https://pnpm.io/) for installing dependencies and running scripts.
 
 The main branch is locked for the push action. For proposing changes, use the standard [pull request approach](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request). It's recommended to discuss fixes or new functionality in the Issues, first.
 
@@ -16,7 +16,7 @@ In the [examples](./examples) directory you can find example apps, to run them, 
 
 ### Running unit tests
 
-Run `pnpm test` to execute the unit tests via [Jest](https://jestjs.io/).
+Run `pnpm test` to execute the unit tests via [Vitest](https://vitest.dev/).
 
 ### Committing changes
 
@@ -24,7 +24,9 @@ We follow [Conventional Commits](https://conventionalcommits.org/) for committin
 
 ### How to publish
 
-The library is automatically released and published to NPM on every push to the main branch if there are relevant changes. The workflow must be approved by one of the maintainers, first.
+Releases are managed with [changesets](https://github.com/changesets/changesets). When you make a change that should be released, add a changeset to your pull request with `pnpm changeset` and commit the generated file in `.changeset/` along with your changes.
+
+When pull requests with changesets are merged to the main branch, the release workflow opens (or updates) a "Version Packages" pull request that bumps the version and updates the changelog. Merging that pull request builds the package and publishes it to NPM.
 
 ### Generating docs
 

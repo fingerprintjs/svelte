@@ -15,7 +15,7 @@ export function useVisitorData({
   const isFetchedValue = writable(false)
   const errorValue = writable<Error | undefined>(undefined)
 
-  const context = getContext<FingerprintSvelteContext>(FINGERPRINT_CONTEXT)
+  const context = getContext<FingerprintSvelteContext | undefined>(FINGERPRINT_CONTEXT)
 
   if (!context) {
     throw new Error('Fingerprint context is missing. Did you forget to wrap your component with <FingerprintProvider>?')

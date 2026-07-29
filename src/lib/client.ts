@@ -10,9 +10,7 @@ export function makeGetVisitorData(startOptions: StartOptions): GetVisitorData {
       throw new Error('getVisitorData() can only be called in the browser.')
     }
 
-    if (!agent) {
-      agent = start(startOptions)
-    }
+    agent ??= start(startOptions)
 
     return agent.get(options)
   }
