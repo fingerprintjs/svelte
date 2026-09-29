@@ -172,6 +172,13 @@ This library uses the Fingerprint JavaScript agent under the hood. See our docum
 
 `getData()` rethrows errors from the JS Agent after storing them in the `error` store. Non-Error values are normalized into `Error` instances. See [JS Agent error handling](https://docs.fingerprint.com/reference/js-agent-v4-error-handling) for more details.
 
+## Version support
+
+| SDK major version | JS Agent version | Status | End of support |
+|---|---|---|---|
+| v3.x (current) | [v4](https://docs.fingerprint.com/reference/js-agent) | Supported | - |
+| v1.x-v2.x | [v3](https://docs.fingerprint.com/reference/v3/javascript-agent) | Deprecated (security fixes only). See the [migration guide](https://docs.fingerprint.com/docs/svelte#migration-guide-for-svelte-sdk-v3-0-0). | To be decided |
+
 ## Support and feedback
 
 To report problems, ask questions or provide feedback, please use [Issues](https://github.com/fingerprintjs/svelte/issues). If you need private support, you can email us at [oss-support@fingerprint.com](mailto:oss-support@fingerprint.com).
