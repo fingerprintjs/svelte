@@ -1,5 +1,15 @@
 # @fingerprint/svelte
 
+## 3.1.0
+
+### Minor Changes
+
+- Deprecate `tag` in favor of `tags` ([81ec8ec](https://github.com/fingerprintjs/svelte/commit/81ec8eccfedf9a5609d8e299e83bc5e7dcd17354))
+
+### Patch Changes
+
+- Bump `@fingerprint/agent` dependency to `^4.1.6` ([4accaf8](https://github.com/fingerprintjs/svelte/commit/4accaf84558de19a46b854f042fab847917d3f65))
+
 ## 3.0.0
 
 ### Major Changes
