@@ -2,5 +2,5 @@
 // Committed to git because svelte-package scopes builds to src/lib/,
 // so a runtime import of ../../package.json escapes the package boundary.
 // See https://svelte.dev/docs/kit/packaging
-export const VERSION = '3.0.0'
+export const VERSION = '3.1.0'
 export const INTEGRATION_INFO_PACKAGE_NAME = 'fingerprintjs-pro-svelte'
